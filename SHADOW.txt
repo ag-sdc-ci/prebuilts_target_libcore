@@ -1,0 +1,5 @@
+shadow prebuilt repo: libcore (target)
+  upstream: LineageOS/android_libcore (platform/libcore)
+  api-level: 34 (branch 34-20261025)
+  payload: extracted flattened payload (root) + root Android.bp
+  date: 2026-10-25

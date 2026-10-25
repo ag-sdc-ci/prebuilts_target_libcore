@@ -1,0 +1,115 @@
+// Auto-generated prebuilt Blueprint for libcore
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+cc_library_headers {
+    name: "libcore_headers",
+    host_supported: true,
+    export_include_dirs: ["include"],
+    native_bridge_supported: true,
+    product_available: true,
+    vendor_available: true,
+    ramdisk_available: true,
+    recovery_available: true,
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_prebuilt_library_shared {
+    name: "libandroidio",
+    host_supported: true,
+    arch: {
+        x86_64: {
+            srcs: ["lib64/libandroidio.so"],
+        },
+    },
+    export_include_dirs: ["include"],
+    shared_libs: ["liblog"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+        "//apex_available:anyapex",
+    ],
+    visibility: ["//visibility:public"],
+}
+
+cc_prebuilt_library_shared {
+    name: "libjavacore",
+    host_supported: true,
+    arch: {
+        x86_64: {
+            srcs: ["lib64/libjavacore.so"],
+        },
+    },
+    export_include_dirs: ["include"],
+    shared_libs: [
+        "libandroidio",
+        "libbase",
+        "libcrypto",
+        "libexpat",
+        "libicu",
+        "liblog",
+        "libnativehelper",
+        "libz",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+        "//apex_available:anyapex",
+    ],
+    visibility: ["//visibility:public"],
+}
+
+cc_prebuilt_library_shared {
+    name: "libopenjdk",
+    host_supported: true,
+    arch: {
+        x86_64: {
+            srcs: ["lib64/libopenjdk.so"],
+        },
+    },
+    export_include_dirs: ["include"],
+    shared_libs: [
+        "libandroidio",
+        "libcrypto",
+        "libicu",
+        "liblog",
+        "libnativehelper",
+        "libz",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+        "//apex_available:anyapex",
+    ],
+    visibility: ["//visibility:public"],
+}
+
+java_import {
+    name: "core-oj",
+    jars: ["share/libcore/core-oj.jar"],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+java_import {
+    name: "core-libart",
+    jars: ["share/libcore/core-libart.jar"],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}

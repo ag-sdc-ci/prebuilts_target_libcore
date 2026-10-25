@@ -1,0 +1,39 @@
+{
+	"provideLibs": [	
+		    "libandroidio-x86_64-v2.so",
+		    "libandroidio.so",
+		    "libdummy_binary_libandroidio-x86_64-v2.so.so",
+		    "libdummy_binary_libandroidio.so.so",
+		    "libdummy_binary_libjavacore-x86_64-v2.so.so",
+		    "libdummy_binary_libjavacore.so.so",
+		    "libdummy_binary_libopenjdk-x86_64-v2.so.so",
+		    "libdummy_binary_libopenjdk.so.so",
+		    "libdummy_ext_libcore-x86_64-v2.so",
+		    "libdummy_ext_libcore.so",
+		    "libdummy_headers_ext_libcore-x86_64-v2.so",
+		    "libdummy_headers_ext_libcore.so",
+		    "libdummy_shared_libcore-x86_64-v2.so",
+		    "libdummy_shared_libcore.so",
+		    "libjavacore-x86_64-v2.so",
+		    "libjavacore.so",
+		    "libopenjdk-x86_64-v2.so",
+		    "libopenjdk.so"
+	],
+	"requireLibs": [	
+		    "libbase.so",
+		    "libc++_shared.so",
+		    "libc.so",
+		    "libcrypto.so",
+		    "libdl.so",
+		    "libexpat.so",
+		    "libicu.so",
+		    "liblog.so",
+		    "libm.so",
+		    "libnativehelper.so",
+		    "libnativehelper_compat_libc++.so",
+		    "libopenjdkjvm.so",
+		    "libz.so",
+		    "libziparchive.so"
+	],
+	"visible": true
+}
